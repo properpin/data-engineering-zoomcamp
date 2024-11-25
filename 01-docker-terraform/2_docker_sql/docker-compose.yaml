@@ -5,9 +5,9 @@ services:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=ny_taxi
-    volumes:
+    volumes: # location to persist the data after container stops
       - "./ny_taxi_postgres_data:/var/lib/postgresql/data:rw"
-    ports:
+    ports: # able to send request and use SQL to access database
       - "5432:5432"
   pgadmin:
     image: dpage/pgadmin4
