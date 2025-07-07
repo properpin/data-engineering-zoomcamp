@@ -1,6 +1,6 @@
 variable "credentials" {
   description = "My Credentials"
-  default     = "<Path to your Service Account json file>"
+  default     = "../terraform_basic/.keys/gcp.json"
   #ex: if you have a directory where this file is called keys with your service account json file
   #saved there as my-creds.json you could use default = "./keys/my-creds.json"
 }
@@ -8,13 +8,13 @@ variable "credentials" {
 
 variable "project" {
   description = "Project"
-  default     = "<Your Project ID>"
+  default     = "terraform-basic-458911"
 }
 
 variable "region" {
   description = "Region"
   #Update the below to your desired region
-  default     = "us-central1"
+  default     = "asia-east1"
 }
 
 variable "location" {
@@ -32,7 +32,7 @@ variable "bq_dataset_name" {
 variable "gcs_bucket_name" {
   description = "My Storage Bucket Name"
   #Update the below to a unique bucket name
-  default     = "terraform-demo-terra-bucket"
+  default     = "terraform-basic-458911-demo-bucket"
 }
 
 variable "gcs_storage_class" {

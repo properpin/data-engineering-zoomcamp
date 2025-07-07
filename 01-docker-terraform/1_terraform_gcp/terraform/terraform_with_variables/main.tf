@@ -2,7 +2,7 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = "5.6.0"
+      version = "6.33.0"
     }
   }
 }
@@ -16,7 +16,7 @@ provider "google" {
 
 resource "google_storage_bucket" "demo-bucket" {
   name          = var.gcs_bucket_name
-  location      = var.location
+  location      = var.location // optional
   force_destroy = true
 
 

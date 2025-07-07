@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+### This is the file adpated from upload-data.ipynb
+
 import os
+# argparse is a standard library for parsing command line arguments
 import argparse
+
 
 from time import time
 
