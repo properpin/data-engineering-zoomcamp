@@ -3,6 +3,7 @@ import os
 import requests
 import pandas as pd
 from google.cloud import storage
+from dotenv import load_dotenv  # 新增：讀取 .env
 
 """
 Pre-reqs: 
@@ -10,11 +11,12 @@ Pre-reqs:
 2. Set GOOGLE_APPLICATION_CREDENTIALS to your project/service-account key
 3. Set GCP_GCS_BUCKET as your bucket or change default value of BUCKET
 """
-
+# 讀取 .env 內容
+load_dotenv()  # 載入 .env, 讀取GCP_GCS_BUCKET和GOOGLE_APPLICATION_CREDENTIALS設定
 # services = ['fhv','green','yellow']
 init_url = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/'
 # switch out the bucketname
-BUCKET = os.environ.get("GCP_GCS_BUCKET", "dtc-data-lake-bucketname")
+BUCKET = os.environ.get("GCP_GCS_BUCKET")
 
 
 def upload_to_gcs(bucket, object_name, local_file):
