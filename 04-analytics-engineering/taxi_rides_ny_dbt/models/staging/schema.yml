@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: staging
+    database: neon-particle-467514-q0 # "Project ID" in BigQuery
+    schema: trips_data_all_us # "Dataset" in BigQuery
+
+
+    tables:
+      - name: 
